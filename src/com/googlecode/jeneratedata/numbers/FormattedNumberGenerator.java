@@ -1,4 +1,4 @@
-package com.googlecode.jeneratedata.strings;
+package com.googlecode.jeneratedata.numbers;
 
 import java.text.NumberFormat;
 
