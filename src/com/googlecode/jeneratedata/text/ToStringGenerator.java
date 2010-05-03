@@ -1,4 +1,4 @@
-package com.googlecode.jeneratedata.strings;
+package com.googlecode.jeneratedata.text;
 
 import com.googlecode.jeneratedata.core.Generator;
 import com.googlecode.jeneratedata.core.GeneratorWrapperBase;

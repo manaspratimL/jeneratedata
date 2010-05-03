@@ -1,18 +1,18 @@
-package com.googlecode.jeneratedata.strings;
+package com.googlecode.jeneratedata.text;
 
 import org.apache.commons.lang.RandomStringUtils;
 
 import com.googlecode.jeneratedata.core.Generator;
 
 /**
- * Generates random alphabetic strings as returned by
- * {@link RandomStringUtils#randomAlphabetic(int)} from the
+ * Generates random numeric strings as returned by
+ * {@link RandomStringUtils#randomNumeric(int)} from the
  * <a href="http://commons.apache.org/lang/">Commons Lang</a> library.
  * 
  * @author Agustin Barto <abarto@gmail.com>
  * @see <a href="http://commons.apache.org/lang/">Lang - Home</a>
  */
-public class AlphabeticStringGenerator implements Generator<String> {
+public class NumericStringGenerator implements Generator<String> {
 	/**
 	 * Length of the generated strings.
 	 */
@@ -23,7 +23,7 @@ public class AlphabeticStringGenerator implements Generator<String> {
 	 * 
 	 * @param count Length the generated strings.
 	 */
-	public AlphabeticStringGenerator(int count) {
+	public NumericStringGenerator(int count) {
 		super();
 		this.count = count;
 	}
@@ -33,6 +33,6 @@ public class AlphabeticStringGenerator implements Generator<String> {
 	 */
 	@Override
 	public String generate() {
-		return RandomStringUtils.randomAlphabetic(count);
+		return RandomStringUtils.randomNumeric(count);
 	}
 }
