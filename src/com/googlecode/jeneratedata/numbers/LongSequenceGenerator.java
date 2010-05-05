@@ -35,6 +35,7 @@ public class LongSequenceGenerator implements Generator<Long> {
 	 */
 	public LongSequenceGenerator(Long startFrom) {
 		currentValue = startFrom;
+		step = 1L;
 	}
 
 	/**
@@ -46,6 +47,7 @@ public class LongSequenceGenerator implements Generator<Long> {
 	 */
 	public LongSequenceGenerator(Long startFrom, Long step) {
 		currentValue = startFrom;
+		this.step = step;
 	}
 
 	/* (non-Javadoc)

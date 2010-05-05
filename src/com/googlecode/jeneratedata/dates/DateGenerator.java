@@ -1,5 +1,6 @@
 package com.googlecode.jeneratedata.dates;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
@@ -40,6 +41,19 @@ public class DateGenerator implements Generator<Date> {
 		super();
 		this.startTime = start.getTime();
 		this.endTime = end.getTime();
+		random = new Random();
+	}
+	
+	/**
+	 * Constructor.
+	 * 
+	 * @param start The start of the period that contains the generated data
+	 * items.
+	 * @param end The start of the period that contains the generated data
+	 * items.
+	 */
+	public DateGenerator(Calendar start, Calendar end) {
+		this(start.getTime(), end.getTime());
 	}
 
 	/* (non-Javadoc)
