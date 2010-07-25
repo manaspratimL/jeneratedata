@@ -1,28 +1,29 @@
 package com.googlecode.jeneratedata.people;
 
 import com.googlecode.jeneratedata.core.Generator;
+import com.googlecode.jeneratedata.core.GeneratorWrapperBase;
 import com.googlecode.jeneratedata.core.RandomSequenceArrayBasedGenerator;
 
 /**
  * Generates random female names. The list of names was taken from the top 200
- * most common names in the United Stated by the 2000 census. 
+ * most common names in the United Stated by the 2000 census.
  * 
- * @author Agustin Barto <abarto@gmail.com> 
+ * @author Agustin Barto <abarto@gmail.com>
  */
-public class FemaleNameGenerator implements Generator<String> {
+public class FemaleNameGenerator extends GeneratorWrapperBase<String> implements Generator<String> {
 	/**
-	 * Array of the most common female names in the United States.
+	 * The most common female names in the United States.
 	 */
-	private String[] names = new String[] { "Mary", "Patricia", "Linda",
-			"Barbara", "Elizabeth", "Jennifer", "Maria", "Susan", "Margaret",
-			"Dorothy", "Lisa", "Nancy", "Karen", "Betty", "Helen", "Sandra",
-			"Donna", "Carol", "Ruth", "Sharon", "Michelle", "Laura", "Sarah",
-			"Kimberly", "Deborah", "Jessica", "Shirley", "Cynthia", "Angela",
-			"Melissa", "Brenda", "Amy", "Anna", "Rebecca", "Virginia",
-			"Kathleen", "Pamela", "Martha", "Debra", "Amanda", "Stephanie",
-			"Carolyn", "Christine", "Marie", "Janet", "Catherine", "Frances",
-			"Ann", "Joyce", "Diane", "Alice", "Julie", "Heather", "Teresa",
-			"Doris", "Gloria", "Evelyn", "Jean", "Cheryl", "Mildred",
+	private static final String[] names = new String[] { "Mary", "Patricia",
+			"Linda", "Barbara", "Elizabeth", "Jennifer", "Maria", "Susan",
+			"Margaret", "Dorothy", "Lisa", "Nancy", "Karen", "Betty", "Helen",
+			"Sandra", "Donna", "Carol", "Ruth", "Sharon", "Michelle", "Laura",
+			"Sarah", "Kimberly", "Deborah", "Jessica", "Shirley", "Cynthia",
+			"Angela", "Melissa", "Brenda", "Amy", "Anna", "Rebecca",
+			"Virginia", "Kathleen", "Pamela", "Martha", "Debra", "Amanda",
+			"Stephanie", "Carolyn", "Christine", "Marie", "Janet", "Catherine",
+			"Frances", "Ann", "Joyce", "Diane", "Alice", "Julie", "Heather",
+			"Teresa", "Doris", "Gloria", "Evelyn", "Jean", "Cheryl", "Mildred",
 			"Katherine", "Joan", "Ashley", "Judith", "Rose", "Janice", "Kelly",
 			"Nicole", "Judy", "Christina", "Kathy", "Theresa", "Beverly",
 			"Denise", "Tammy", "Irene", "Jane", "Lori", "Rachel", "Marilyn",
@@ -53,14 +54,17 @@ public class FemaleNameGenerator implements Generator<String> {
 			"Marcia", "Tanya", "Nellie", "Minnie", "Marlene", "Heidi",
 			"Glenda", "Lydia", "Viola", "Courtney", "Marian", "Stella",
 			"Caroline", "Dora", "Jo" };
-	/**
-	 * {@link RandomSequenceArrayBasedGenerator} used to pick the names from the
-	 * contained array.
-	 */
-	private Generator<String> generator = new RandomSequenceArrayBasedGenerator<String>(
-			names);
 
-	/* (non-Javadoc)
+	/**
+	 * Constructor.
+	 */
+	public FemaleNameGenerator() {
+		super(new RandomSequenceArrayBasedGenerator<String>(names));
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.googlecode.jeneratedata.core.Generator#generate()
 	 */
 	@Override
