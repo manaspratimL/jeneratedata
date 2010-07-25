@@ -15,6 +15,6 @@ public class InitialGenerator implements Generator<String> {
 	 */
 	@Override
 	public String generate() {
-		return RandomStringUtils.randomAlphabetic(1).toUpperCase() + ".";
+		return RandomStringUtils.randomAlphabetic(1) + ".";
 	}
 }
