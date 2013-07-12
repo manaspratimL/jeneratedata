@@ -7,7 +7,7 @@ import java.util.Random;
 import com.googlecode.jeneratedata.core.Generator;
 
 /**
- * Generatesd {@link Date} instances between two given dates.
+ * Generates {@link Date} instances between two given dates.
  * 
  * @author Agustin Barto <abarto@gmail.com>
  */

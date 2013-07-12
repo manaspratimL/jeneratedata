@@ -5,7 +5,7 @@ import java.util.Date;
 import com.googlecode.jeneratedata.core.Generator;
 
 /**
- * Generates {@link Date} with the current date/time upon each call to
+ * Generates {@link Date} with the current date/time with each call to
  * {@link #generate()}.
  * 
  * @author Agustin Barto <abarto@gmail.com>
