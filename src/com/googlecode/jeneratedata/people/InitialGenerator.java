@@ -1,6 +1,6 @@
 package com.googlecode.jeneratedata.people;
 
-import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 
 import com.googlecode.jeneratedata.core.Generator;
 
